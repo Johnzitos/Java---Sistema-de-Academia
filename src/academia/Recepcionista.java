@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package academia;
 
-/**
- *
- * @author john
- */
 public class Recepcionista extends Pessoa {
+
     private double salario;
 
     public Recepcionista(double salario, String nome, String CPF, String telefone) {
@@ -16,13 +9,10 @@ public class Recepcionista extends Pessoa {
         this.salario = salario;
     }
 
-    public void getInfo(){
-    
-        
-        
+    public void getInfo() {
+        System.out.println("Informações: Nome: " + getNome() + " | CPF: " + getCPF() + " | Telefone: " + getTelefone() + " | Salário: " + getSalario());
     }
-    
-    
+
     /**
      * @return the salario
      */
@@ -36,5 +26,4 @@ public class Recepcionista extends Pessoa {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-    
 }

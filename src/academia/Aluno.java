@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package academia;
 
-/**
- *
- * @author john
- */
-public class Aluno extends Pessoa{
+public class Aluno extends Pessoa {
+
     private String endereco;
     private String dt_nascimento;
     private String objetivo;
@@ -19,10 +12,11 @@ public class Aluno extends Pessoa{
         this.dt_nascimento = dt_nascimento;
         this.objetivo = objetivo;
     }
-    public void getInfo(){
-    
-        
+
+    public void getInfo() {
+        System.out.println("Informações: Nome: " + getNome() + " | CPF: " + getCPF() + " | Telefone: " + getTelefone() + " | Endereço: " + getEndereco() + " | Nascimento: " + getDt_nascimento() + " | Objetivo: " + getObjetivo());
     }
+
     /**
      * @return the endereco
      */
@@ -64,8 +58,4 @@ public class Aluno extends Pessoa{
     public void setObjetivo(String objetivo) {
         this.objetivo = objetivo;
     }
-
-
-    
-    
 }

@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package academia;
 
-/**
- *
- * @author john
- */
 public class Modalidade {
+
     private String nome;
     private int nivel;
 
@@ -44,5 +37,4 @@ public class Modalidade {
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
-    
 }

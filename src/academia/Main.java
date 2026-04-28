@@ -45,8 +45,12 @@ public class Main {
                     System.out.print("Nome da Academia: ");
                     String nomeAcademia = leitor.nextLine();
                     Academia academiaEncontrada = null;
-                    for (Academia a : listaAcademias)
-                        if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                    for (Academia a : listaAcademias) {
+                        if (a.getNome().equals(nomeAcademia)) {
+                            academiaEncontrada = a;
+                            break;
+                        }
+                    }
 
                     if (academiaEncontrada == null) {
                         System.out.println("Erro: Academia não encontrada.");
@@ -89,8 +93,12 @@ public class Main {
                     System.out.print("Nome da Academia: ");
                     String nomeAcademia = leitor.nextLine();
                     Academia academiaEncontrada = null;
-                    for (Academia a : listaAcademias)
-                        if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                    for (Academia a : listaAcademias) {
+                        if (a.getNome().equals(nomeAcademia)) {
+                            academiaEncontrada = a;
+                            break;
+                        }
+                    }
 
                     if (academiaEncontrada == null) {
                         System.out.println("Erro: Academia não encontrada.");
@@ -117,8 +125,12 @@ public class Main {
                     System.out.print("Nome da Academia: ");
                     String nomeAcademia = leitor.nextLine();
                     Academia academiaEncontrada = null;
-                    for (Academia a : listaAcademias)
-                        if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                    for (Academia a : listaAcademias) {
+                        if (a.getNome().equals(nomeAcademia)) {
+                            academiaEncontrada = a;
+                            break;
+                        }
+                    }
 
                     if (academiaEncontrada == null) {
                         System.out.println("Erro: Academia não encontrada.");
@@ -150,8 +162,12 @@ public class Main {
                     System.out.print("Nome da Academia: ");
                     String nomeAcademia = leitor.nextLine();
                     Academia academiaEncontrada = null;
-                    for (Academia a : listaAcademias)
-                        if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                    for (Academia a : listaAcademias) {
+                        if (a.getNome().equals(nomeAcademia)) {
+                            academiaEncontrada = a;
+                            break;
+                        }
+                    }
 
                     if (academiaEncontrada == null || academiaEncontrada.getRecepcionistas().isEmpty()) {
                         System.out.println("Erro: Academia não encontrada ou sem recepcionistas.");
@@ -163,8 +179,12 @@ public class Main {
                         System.out.print("CPF do Recepcionista: ");
                         String cpfRecep = leitor.nextLine();
                         Recepcionista recepEncontrado = null;
-                        for (Recepcionista r : academiaEncontrada.getRecepcionistas())
-                            if (r.getCPF().equals(cpfRecep)) { recepEncontrado = r; break; }
+                        for (Recepcionista r : academiaEncontrada.getRecepcionistas()) {
+                            if (r.getCPF().equals(cpfRecep)) {
+                                recepEncontrado = r;
+                                break;
+                            }
+                        }
 
                         if (alunoEncontrado == null || recepEncontrado == null) {
                             System.out.println("Erro: Aluno ou recepcionista não encontrado.");
@@ -198,8 +218,12 @@ public class Main {
                     System.out.print("Nome da Academia: ");
                     String nomeAcademia = leitor.nextLine();
                     Academia academiaEncontrada = null;
-                    for (Academia a : listaAcademias)
-                        if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                    for (Academia a : listaAcademias) {
+                        if (a.getNome().equals(nomeAcademia)) {
+                            academiaEncontrada = a;
+                            break;
+                        }
+                    }
 
                     if (academiaEncontrada == null || academiaEncontrada.getMatriculas().isEmpty()) {
                         System.out.println("Erro: Academia não encontrada ou sem matrículas.");
@@ -207,8 +231,12 @@ public class Main {
                         System.out.print("CPF do Aluno: ");
                         String cpfAluno = leitor.nextLine();
                         Matricula matriculaEncontrada = null;
-                        for (Matricula m : academiaEncontrada.getMatriculas())
-                            if (m.getAluno().getCPF().equals(cpfAluno)) { matriculaEncontrada = m; break; }
+                        for (Matricula m : academiaEncontrada.getMatriculas()) {
+                            if (m.getAluno().getCPF().equals(cpfAluno)) {
+                                matriculaEncontrada = m;
+                                break;
+                            }
+                        }
 
                         if (matriculaEncontrada == null) {
                             System.out.println("Erro: Matrícula não encontrada.");
@@ -234,27 +262,40 @@ public class Main {
                 System.out.print("Nome da Academia: ");
                 String nomeAcademia = leitor.nextLine();
                 Academia academiaEncontrada = null;
-                for (Academia a : listaAcademias)
-                    if (a.getNome().equals(nomeAcademia)) { academiaEncontrada = a; break; }
+                for (Academia a : listaAcademias) {
+                    if (a.getNome().equals(nomeAcademia)) {
+                        academiaEncontrada = a;
+                        break;
+                    }
+                }
 
                 if (academiaEncontrada == null) {
                     System.out.println("Erro: Academia não encontrada.");
                 } else if (subOpcao == 1) {
                     System.out.print("CPF do Personal: ");
                     String cpf = leitor.nextLine();
-                    for (Personal p : academiaEncontrada.getPersonais())
-                        if (p.getCPF().equals(cpf)) { p.getInfo(); break; }
+                    for (Personal p : academiaEncontrada.getPersonais()) {
+                        if (p.getCPF().equals(cpf)) {
+                            p.getInfo();
+                            break;
+                        }
+                    }
                 } else if (subOpcao == 2) {
                     System.out.print("CPF do Aluno: ");
                     String cpf = leitor.nextLine();
                     Aluno a = academiaEncontrada.buscarAluno(cpf);
-                    if (a != null) a.getInfo();
-                    else System.out.println("Aluno não encontrado.");
+                    if (a != null) {
+                        a.getInfo();
+                    } else {
+                        System.out.println("Aluno não encontrado.");
+                    }
                 } else if (subOpcao == 3) {
                     if (academiaEncontrada.getMatriculas().isEmpty()) {
                         System.out.println("Nenhuma matrícula registrada.");
                     } else {
-                        for (Matricula m : academiaEncontrada.getMatriculas()) m.getInfo();
+                        for (Matricula m : academiaEncontrada.getMatriculas()) {
+                            m.getInfo();
+                        }
                     }
                 }
             }
